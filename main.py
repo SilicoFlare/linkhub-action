@@ -120,8 +120,12 @@ def {cmp['properties'].get('endpoint')[1:].replace('/', '_')}():
     with open('data/styles.css', 'r') as st:
         style_code = st.read() 
 
-        print(f"::set-output name=indexfile::{main_code}")
-        print(f"::set-output name=stylesfile::{style_code}")
+    # Write processed data to index.py
+    with open('api/index.py', 'w') as finale:
+        finale.write(main_code)
+
+    with open('api/static/styles.css', 'w') as fin:
+        fin.write(style_code)
 
     
 
