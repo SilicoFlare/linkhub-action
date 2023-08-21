@@ -1,13 +1,11 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
-inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
+name: "Linkhub Read Files"
+description: "Read files to generate Linkhub pages"
+author: "SilicoFlare"
 outputs:
-  myOutput:
-    description: "Output from the action"
+  indexfile:
+    description: "Code for index.py"
+  stylesfile:
+    description: "Code for styles.css"
 runs:
   using: "docker"
   image: "Dockerfile"
